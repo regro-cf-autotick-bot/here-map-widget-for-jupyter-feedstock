@@ -1,5 +1,5 @@
 {% set name = "here-map-widget-for-jupyter" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/here-map-widget-for-jupyter-{{ version }}.tar.gz
-  sha256: e74f3790f3179ac4ada9439e4ce3a6a3beb1e4808a6dec9ef7e840d491163018
+  sha256: c86fa5bfd1c766c2877e31a6fe22e01cbece34375d87eb9c2887e9b9cbda9210
 
 build:
   number: 0
