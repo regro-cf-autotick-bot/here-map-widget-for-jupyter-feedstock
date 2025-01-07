@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/here-map-widget-for-jupyter-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/here-map-widget-for-jupyter-{{ version }}.tar.gz
   sha256: 6dc96b58ad7ea2dbae146e43c79fcc8c74131d345f6d8f196138b5062f6ea888
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,11 +19,11 @@ requirements:
   host:
     - jupyter-packaging >=0.7.9
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - branca >=0.3.1,<0.5
     - ipywidgets >=7.6.0,<8
-    - python >=3.6
+    - python >={{ python_min }}
     - xyzservices >=2021.8.0
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/here-map-widget-for-jupyter/
